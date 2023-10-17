@@ -11,8 +11,6 @@ char& tolower(char a[], int& cnt, bool& success) {
             cnt++;
             success = true;
         }
-        else
-            success = false;
     }
     
     return a[0];  // 첫 번째 문자를 참조로 반환

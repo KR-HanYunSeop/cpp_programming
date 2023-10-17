@@ -9,15 +9,24 @@ int main() {
     cin >> a;
     cout << "두 번째 수: ";
     cin >> b;
-    if (a < b) {
-        for (int i = a; i <= b; i++) {
-        sum += i;   
-        }
+
+    int start = a;
+    int end = b;
+
+    if (a > b) {
+        int temp = a;
+        a = b;
+        b = temp;
     }
-    else {
-        for (int j = b; j <= a; j--) {
-            sum += j;
-        }
+
+    for (int i = a; i <= b; i++) {
+        sum += i;
     }
-    cout << a << " 에서" << b << " 까지 더한 결과는 " << sum << "입니다." << endl;
+
+    cout << start << " 에서 " << end << " 까지 더한 결과는 " << sum << "입니다." << endl;
 }
+
+
+
+
+
