@@ -9,8 +9,7 @@ private:
 
 public:
     Stack() : top(-1) {}
-
-    // Push operation using the << operator
+    
     Stack& operator<<(int value) {
         if (top < MAX_SIZE - 1) {
             data[++top] = value;
@@ -18,7 +17,6 @@ public:
         return *this;
     }
 
-    // Pop operation using the >> operator
     Stack& operator>>(int& value) {
         if (top >= 0) {
             value = data[top--];
@@ -26,7 +24,6 @@ public:
         return *this;
     }
 
-    // Check if the stack is empty using the ! operator
     operator bool() const {
         return top >= 0;
     }
@@ -46,6 +43,6 @@ int main() {
         cout << x << ' ';
     }
 
-    cout << std::endl;
+    cout << endl;
 
 }

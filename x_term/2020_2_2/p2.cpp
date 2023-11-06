@@ -13,7 +13,7 @@ char& tolower(char a[], int& cnt, bool& success) {
         }
     }
     
-    return a[0];  // 첫 번째 문자를 참조로 반환
+    return a[0];
 }
 
 int main() {
